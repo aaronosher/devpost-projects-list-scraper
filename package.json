@@ -1,0 +1,33 @@
+{
+    "name": "mlh-events-scraper",
+    "version": "1.0.0",
+    "description": "A Utility for getting events from mlh.io",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "rimraf lib/ && babel src/ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+        "start": "npm run build && node lib/index.js",
+        "docker": "docker-compose up --build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aaronosher/mlh-events-scraper.git"
+    },
+    "author": "Aaron Osher",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/aaronosher/mlh-events-scraper/issues"
+    },
+    "homepage": "https://github.com/aaronosher/mlh-events-scraper#readme",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "eslint": "^4.9.0",
+        "nodemon": "^1.12.1",
+        "rimraf": "^2.6.2"
+    },
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.2",
+        "request": "^2.83.0",
+        "request-promise": "^4.2.2"
+    }
+}
