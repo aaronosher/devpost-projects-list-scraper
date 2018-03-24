@@ -1,7 +1,7 @@
 {
-    "name": "mlh-events-scraper",
+    "name": "devpost-projects-list-scraper",
     "version": "1.0.0",
-    "description": "A Utility for getting events from mlh.io",
+    "description": "A Utility for getting projects from devpost",
     "main": "lib/index.js",
     "scripts": {
         "build": "rimraf lib/ && babel src/ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
@@ -10,14 +10,14 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/aaronosher/mlh-events-scraper.git"
+        "url": "git+https://github.com/aaronosher/devpost-projects-list-scraper.git"
     },
     "author": "Aaron Osher",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/aaronosher/mlh-events-scraper/issues"
+        "url": "https://github.com/aaronosher/devpost-projects-list-scraper/issues"
     },
-    "homepage": "https://github.com/aaronosher/mlh-events-scraper#readme",
+    "homepage": "https://github.com/aaronosher/devpost-projects-list-scraper#readme",
     "devDependencies": {
         "babel-cli": "^6.26.0",
         "babel-preset-env": "^1.6.1",

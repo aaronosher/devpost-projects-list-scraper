@@ -1,28 +1,21 @@
 import sources from './sources'
 import cheerio from 'cheerio'
-import proccessRequest from './getEvents'
+import proccessRequest from './getProjects'
 
 /**
- * Gets events. valid locales are na and eu
- * @param {string} locale 
+ * Gets projects for page
+ * @param {number} page 
  */
-function getEvents(locale) {
-    return new Promise((resolve, reject) => {
+function getProjects(page) {
 
-        if(!sources[locale]) {
-            return rject('Invalid Locale')
+    let options = {
+        uri: sources.devpost + page,
+        transform: (body) => {
+            return cheerio.load(body)
         }
+    }
 
-        let options = {
-            uri: sources[locale],
-            transform: (body) => {
-                return cheerio.load(body)
-            }
-        }
-
-        let events = proccessRequest(options)
-        return resolve(events)
-    })
+    return proccessRequest(options)
 }
 
-export default getEvents
+export default getProjects
