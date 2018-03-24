@@ -1,12 +1,12 @@
-# MLH Events Scraper
+# Devpost Project URLs Scraper
 
-Retrievs events from selected region and returns a natvie promise with the events in an array.
+Retrievs project urls for devpost projects from trending pages
 
 ```JS
-import mlh from 'mlh-events-scraper'
+import devpost from 'devpost-projects-list-scraper'
 
-mlh('eu')
-  .then((events) => {
+devpost(1)
+  .then((project_urls) => {
     // Proccess events data
   })
   .catch((err) => {
