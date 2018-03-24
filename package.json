@@ -1,6 +1,6 @@
 {
     "name": "devpost-projects-list-scraper",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Utility for getting projects from devpost",
     "main": "lib/index.js",
     "scripts": {
